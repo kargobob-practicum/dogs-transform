@@ -1,0 +1,72 @@
+.page {
+  margin: 0;
+  background-color: rgb(53, 53, 53);
+}
+
+.main {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+  width: 1300px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  border: 2px solid rgb(117, 117, 117);
+  transition: background-color 0.5s ease-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  background-color: aqua;
+}
+
+.card .card__image-rotate {
+  transition: transform 5s ease-in-out;
+}
+
+.card .card__image-translate {
+  transition: transform 0.1s ease-out;
+}
+
+.card .card__image-scale {
+  transition: transform 1s linear;
+}
+
+.card .card__image-skew:hover {
+  transition: transform 2s ease-in-out;
+}
+
+.card__title {
+  text-align: center;
+  margin: 0 0 50px;
+  color: whitesmoke;
+}
+
+.card__image {
+  width: 300px;
+  height: 300px;
+  object-fit: fill;
+}
+
+.card .card__image-rotate:hover {
+  transform: rotate(360deg);
+}
+
+.card .card__image-translate:hover {
+  transform: translate(40px, 20px);
+}
+
+.card .card__image-scale:hover {
+  transform: scale(1.5);
+}
+
+.card .card__image-skew:hover {
+  transform: skew(10deg, 15deg);
+}
