@@ -52,7 +52,7 @@
 .card__image {
   width: 300px;
   height: 300px;
-  object-fit: fill;
+  object-fit: contain;
 }
 
 .card .card__image-rotate:hover {
