@@ -1,14 +1,58 @@
+@keyframes trans {
+  from {
+    transform: translate(-100px, 0);
+  }
+  to {
+    transform: translate(100px, 0);
+  }
+}
+
+@keyframes translate {
+  from {
+    transform: translate(-20px, 0);
+  }
+  to {
+    transform: translate(20px, 10px);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes skew {
+  from {
+    transform: skew(-10deg, -15deg);
+  }
+  to {
+    transform: skew(10deg, 15deg);
+  }
+}
+
 .page {
-  margin: 0;
+  margin: 0 auto;
   background-color: rgb(53, 53, 53);
+  width: 1300px;
 }
 
 .main {
   display: flex;
-  margin: 0 auto;
   justify-content: center;
   height: 500px;
-  width: 1300px;
 }
 
 .cards {
@@ -36,7 +80,7 @@
 }
 
 .card .card__image-scale {
-  transition: transform 1s linear;
+  transition: transform 1s ease-in-out;
 }
 
 .card .card__image-skew {
@@ -47,6 +91,23 @@
   text-align: center;
   margin: 0 0 50px;
   color: whitesmoke;
+  padding-top: 20px;
+}
+
+.card__title-rotate {
+  animation: rotate 1s ease-in-out infinite alternate;
+}
+
+.card__title-translate {
+  animation: translate 0.7s ease-in-out infinite alternate;
+}
+
+.card__title-scale {
+  animation: scale 0.5s ease-in-out infinite alternate;
+}
+
+.card__title-skew {
+  animation: skew 1.5s ease-in-out infinite alternate;
 }
 
 .card__image {
@@ -77,9 +138,5 @@
   font-weight: 600;
   text-align: center;
   color: whitesmoke;
-  transition: transform 1s linear;
-}
-
-.header__title:hover {
-  transform: scale(1.5);
+  animation: trans 1s ease-in-out infinite alternate;
 }
